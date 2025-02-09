@@ -1,0 +1,42 @@
+@media (max-width: 768px) {
+	.botsBlock {
+		position: absolute;
+		top: 50vh;
+		height: 28vh;
+		width: 95%;
+		left: 2.5%;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+		gap: 2px;
+		border-radius: 5px;
+		
+		.bot-card {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			background-color: #252d40;
+			border-radius: 8px;
+			padding: 10px;
+			text-align: center;
+			transition: background 0.3s ease-in-out;
+		}
+
+		.bot-card:active {
+			background: radial-gradient(circle, #252d40 30%, #283750 100%); /* Градиент фона при нажатии */
+		}
+
+		.bot-icon {
+			margin-top: 5px;
+			width: 12vw;
+		}
+		.bot-name {
+			font-weight: bold;
+			margin: 5px;
+		}
+		.bot-change {
+			margin: 0;
+		}
+	}
+}
