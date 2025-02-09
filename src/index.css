@@ -1,0 +1,12 @@
+html {
+	background-color: rgb(29, 38, 55);
+}
+
+@media (max-width: 768px) {
+	body {
+		margin: 0;
+		overflow: hidden;
+	}
+}
+
+

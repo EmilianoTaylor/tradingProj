@@ -1,0 +1,12 @@
+@media (max-width: 768px) {
+	.navigationBlock {
+		position: absolute;
+		width: 100%;
+		height: 10vh;
+
+		.menuIcon, .dashboard, .refreshIcon {
+			position: absolute;
+			width: 100%;
+		}
+	}
+}

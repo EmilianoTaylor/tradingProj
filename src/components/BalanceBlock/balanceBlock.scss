@@ -1,0 +1,53 @@
+@media (max-width: 768px) {
+	.balanceBlock {
+		position: absolute;
+		top: 12%;
+		width: 100%;
+		height: 15vh;
+		color: #F1F1F1;
+
+		.capital {
+			position: absolute;
+			left: 5%;
+			width: 50%;
+
+			.capitalTitle {
+				display: block;
+				color: #546076;
+				font-size: 4vw;
+			}
+
+			.capitalCurrency {
+				display: block;
+				font-size: 8vw;
+			}
+		}
+
+		.balance {
+			display: block;
+			position: absolute;
+			width: 40%;
+			right: 3%;
+			list-style: none;
+			color: #546076;
+			font-size: 4vw;
+
+			.balanceValue, .onholdValue {
+				display: flex;
+				align-items: center;
+				width: 100%;
+				justify-content: space-between;
+			}
+
+			img {
+				width: 10%;
+				vertical-align: middle;
+			}
+
+			strong {
+				color: #F1F1F1;
+				margin: 0 8px;
+			}
+		}
+	}
+}
