@@ -38,3 +38,35 @@
 		}
 	}
 }
+
+@media (max-height: 720px) {
+	.toolPanel {
+		bottom: 0;
+		height: 8vh;
+
+		.toolItem {
+			margin: 10px;
+			width: 20%;
+		}
+		
+		.toolIcon {
+			width: 3.6vh;
+			margin-bottom: 6px;
+		}
+
+		.toolItem:last-child::after {
+			content: "";
+			position: absolute;
+			right: 5vw;
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			background-color: orange;
+		}
+		
+		.toolName {
+			font-size: 1.7vh;
+			color: #546076;
+		}
+	}
+}

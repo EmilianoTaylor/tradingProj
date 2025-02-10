@@ -2,8 +2,8 @@
 	.time-interval-block {
 		width: 100%;
 		position: relative;
-		right: -5%;
-		top: 85vh;
+		right: -3%;
+		top: 75vh;
 		display: flex;
 		align-items: center;
 		gap: 2.6vw;
@@ -23,6 +23,27 @@
 		cursor: pointer;
 		transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 		font-size: 3vw;
+	}
+	
+	.time-button.active {
+		border: 1px solid #fff;
+		color: #fff;
+	}
+}
+
+@media (max-height: 720px) {
+	.time-interval-block {
+		right: -5%;
+		top: 74vh;
+		display: flex;
+		align-items: center;
+		gap: 1vh;
+	}
+	
+	.time-button {
+		padding: 0.7vh 1.4vh;
+		border-radius: 15px;
+		font-size: 1.8vh;
 	}
 	
 	.time-button.active {

@@ -5,6 +5,8 @@ import botBalance from '../extra/src/layers/Bots/fullBots/botBlue.png'
 import botDefence from '../extra/src/layers/Bots/fullBots/botGreen.png'
 import megabot from '../extra/src/layers/Bots/fullBots/botYellow.png'
 import botAttackTwo from '../extra/src/layers/Bots/fullBots/botRed.png'
+import arrow from '../extra/src/layers/Bots/arrows/arrow.png'
+import arrows from '../extra/arrows.png'
 import data from '../../data/data.min.json'
 
 
@@ -19,9 +21,8 @@ const BotsBlock = ({ selectedInterval }) => {
     { name: "ATTACK", icon: botAttackTwo, serverName: "red_bot" }
 	];
 
-
 	return (
-		<div className="botsBlock">
+	<div className="botsBlock">
 		{bots.map((bot, index) => {
 			const botData = data.bots.find(b => b.name === bot.serverName);
 			const change = botData ? botData[selectedInterval] : null;
@@ -35,6 +36,11 @@ const BotsBlock = ({ selectedInterval }) => {
 				</div>
 			);
 		})}
+		<img src={arrow} className="arrow arrow-1"/>
+		<img src={arrow} className="arrow arrow-2"/>
+		<img src={arrow} className="arrow arrow-3"/>
+		<img src={arrow} className="arrow arrow-4"/>
+		{/* <img src={arrows} className="arrowsBlock" /> */}
 	</div>
 	)
 }
