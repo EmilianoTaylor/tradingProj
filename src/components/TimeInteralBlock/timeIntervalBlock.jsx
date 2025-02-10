@@ -9,17 +9,14 @@ const TimeIntervalBlock = ({ onIntervalChange }) => {
     { label: "All time", value: "all_time" }
   ];
 
-  const [activeInterval, setActiveInterval] = useState(() => {
-		return localStorage.getItem("activeInterval") || "all_time";
-	});
-	
-	useEffect(() => {
-		localStorage.setItem("activeInterval", activeInterval);
-	}, [activeInterval]);
+	const [activeInterval, setActiveInterval] = useState(() => {
+    return localStorage.getItem("selectedInterval") || "all_time";
+  });
 
   const handleClick = (value) => {
     setActiveInterval(value);
     onIntervalChange(value);
+    localStorage.setItem("selectedInterval", value);
   };
 
   
