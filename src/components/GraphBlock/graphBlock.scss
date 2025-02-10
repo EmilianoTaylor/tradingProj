@@ -7,9 +7,9 @@
 
 		.graph {
 			position: absolute;
-			width: 120%;
-			left: -7%;
+			height: 25vh;
 			bottom: 13%;
+			transition: all 0.5s ease-in-out;
 		}
 
 		.graphResult {

@@ -1,0 +1,33 @@
+@media (max-width: 768px) {
+	.time-interval-block {
+		width: 100%;
+		position: relative;
+		right: -5%;
+		top: 85vh;
+		display: flex;
+		align-items: center;
+		gap: 2.6vw;
+	}
+	
+	.time-label {
+		font-weight: bold;
+		color: #546076;
+	}
+	
+	.time-button {
+		background: none;
+		border: 1px solid #555;
+		padding: 1.5vw 3vw;
+		border-radius: 15px;
+		color: #546076;
+		cursor: pointer;
+		transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+		font-size: 3vw;
+	}
+	
+	.time-button.active {
+		border: 1px solid #fff;
+		color: #fff;
+	}
+}
+

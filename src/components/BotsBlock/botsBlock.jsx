@@ -5,28 +5,37 @@ import botBalance from '../extra/src/layers/Bots/fullBots/botBlue.png'
 import botDefence from '../extra/src/layers/Bots/fullBots/botGreen.png'
 import megabot from '../extra/src/layers/Bots/fullBots/botYellow.png'
 import botAttackTwo from '../extra/src/layers/Bots/fullBots/botRed.png'
+import data from '../../data/data.min.json'
 
-const BotsBlock = () => {
+
+const BotsBlock = ({ selectedInterval }) => {
+
 	const bots = [
-		{ name: "ATTACK", icon: botAttackOne, change: "-8.2%", color: "red" },
-		{ name: "PLACE BOT HERE", icon: placeBot, change: "", color: "gray" },
-		{ name: "BALANCE", icon: botBalance, change: "-3.7%", color: "red" },
-		{ name: "DEFENCE", icon: botDefence, change: "+2.5%", color: "green" },
-		{ name: "MEGABOT", icon: megabot, change: "+3.6%", color: "green" },
-		{ name: "ATTACK", icon: botAttackTwo, change: "+13.7%", color: "green" }
+		{ name: "ATTACK", icon: botAttackOne, serverName: "orange_bot" },
+    { name: "PLACE BOT HERE", icon: placeBot },
+    { name: "BALANCE", icon: botBalance, serverName: "blue_bot" },
+    { name: "DEFENCE", icon: botDefence, serverName: "green_bot" },
+    { name: "MEGABOT", icon: megabot, serverName: "yellow_bot" },
+    { name: "ATTACK", icon: botAttackTwo, serverName: "red_bot" }
 	];
-	
+
 
 	return (
 		<div className="botsBlock">
-      {bots.map((bot, index) => (
-        <div key={index} className={`bot-card`}>
-          <img src={bot.icon} alt={bot.name} className="bot-icon" />
-          <p className="bot-name">{bot.name}</p>
-          {bot.change && <p className="bot-change" style={{ color: bot.color }}>{bot.change}</p>}
-        </div>
-      ))}
-    </div>
+		{bots.map((bot, index) => {
+			const botData = data.bots.find(b => b.name === bot.serverName);
+			const change = botData ? botData[selectedInterval] : null;
+			const changeColor = change ? (change > 0 ? "green" : "red") : "gray";
+
+			return (
+				<div key={index} className="bot-card">
+					<img src={bot.icon} className="bot-icon" />
+					<p className="bot-name">{bot.name}</p>
+					{change !== null && <p className="bot-change" style={{ color: changeColor }}>{change}%</p>}
+				</div>
+			);
+		})}
+	</div>
 	)
 }
 
