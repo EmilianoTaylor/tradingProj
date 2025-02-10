@@ -3,3 +3,5 @@
 Инструкция по взаимодействию с Vite: 
 1) npm install
 2) npm run dev
+
+Ссылка на деплой - https://emilianotaylor.github.io/tradingProj/
