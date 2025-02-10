@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./timeIntervalBlock.scss";
 
 const TimeIntervalBlock = ({ onIntervalChange }) => {
@@ -19,7 +19,6 @@ const TimeIntervalBlock = ({ onIntervalChange }) => {
     localStorage.setItem("selectedInterval", value);
   };
 
-  
   return (
     <div className="time-interval-block">
       <span className="time-label">Time Range:</span>

@@ -6,7 +6,6 @@ import botDefence from '../extra/src/layers/Bots/fullBots/botGreen.png'
 import megabot from '../extra/src/layers/Bots/fullBots/botYellow.png'
 import botAttackTwo from '../extra/src/layers/Bots/fullBots/botRed.png'
 import arrow from '../extra/src/layers/Bots/arrows/arrow.png'
-import arrows from '../extra/arrows.png'
 import data from '../../data/data.min.json'
 
 
@@ -40,7 +39,6 @@ const BotsBlock = ({ selectedInterval }) => {
 		<img src={arrow} className="arrow arrow-2"/>
 		<img src={arrow} className="arrow arrow-3"/>
 		<img src={arrow} className="arrow arrow-4"/>
-		{/* <img src={arrows} className="arrowsBlock" /> */}
 	</div>
 	)
 }

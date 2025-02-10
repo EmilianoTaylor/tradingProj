@@ -35,20 +35,12 @@
 	.time-interval-block {
 		right: -5%;
 		top: 74vh;
-		display: flex;
-		align-items: center;
 		gap: 1vh;
 	}
 	
 	.time-button {
 		padding: 0.7vh 1.4vh;
-		border-radius: 15px;
 		font-size: 1.8vh;
-	}
-	
-	.time-button.active {
-		border: 1px solid #fff;
-		color: #fff;
 	}
 }
 

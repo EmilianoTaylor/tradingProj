@@ -13,6 +13,7 @@ const ToolPanel = () => {
     { tool: 'Coin prices', img: coinPrices },
     { tool: 'Profile', img: profileNote },
   ];
+	
 	return (
 		<div className='toolPanel'>
 			{tools.map((tool, index) => (

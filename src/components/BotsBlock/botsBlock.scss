@@ -1,3 +1,15 @@
+@mixin arrowLeft ($rot, $top, $left) {
+	transform: rotate($rot);
+	top: $top;
+	left: $left;
+}
+
+@mixin arrowRight ($rot, $top, $right) {
+	transform: rotate($rot);
+	top: $top;
+	right: $right;
+}
+
 @media (max-width: 768px) {
 	.botsBlock {
 		position: absolute;
@@ -42,29 +54,21 @@
 
 		.arrow {
 			position: absolute;
-				width: 18vw;
-				z-index: 0;
+			width: 18vw;
+			z-index: 0;
 		}
 
 		.arrow-1 {
-			transform: rotate(260deg);
-			top: 10vh;
-			left: 12vh;
+			@include arrowLeft(260deg, 10vh, 12vh)
 		}
 		.arrow-2 {
-			transform: rotate(0deg);
-			top: 11vh;
-			right: 11.5vh;
+			@include arrowRight(0deg, 11vh, 11.5vh)
 		}
 		.arrow-3 {
-			transform: rotate(45deg);
-			top: 18vh;
-			left: 10vh;
+			@include arrowLeft(45deg, 18vh, 11vh)
 		}
 		.arrow-4 {
-			transform: rotate(45deg);
-			top: 18vh;
-			right: 11.5vh;
+			@include arrowRight(45deg, 18vh, 11.5vh)
 		}
 	}
 }
@@ -87,38 +91,6 @@
 		}
 		.bot-change {
 			font-size: 2vh;
-		}
-
-		.arrowBlock {
-			position: absolute;
-			width: 100%;
-			height: 20vh;
-
-			.arrow {
-				position: absolute;
-				 width: 18vw;
-			}
-
-			.arrow .arrow-1 {
-				transform: rotate(260deg);
-				top: 10vh;
-				left: 12vh;
-			}
-			.arrow .arrow-2 {
-				transform: rotate(45deg);
-				top: 18vh;
-				left: 27.5vh;
-			}
-			.arrow-3 {
-				transform: rotate(45deg);
-				top: 18vh;
-				left: 11vh;
-			}
-			.arrow-4 {
-				transform: rotate(360deg);
-				top: 18vh;
-				left: 27.5vh;
-			}
 		}
 	}
 }
