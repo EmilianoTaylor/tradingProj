@@ -13,11 +13,11 @@ const BotsBlock = ({ selectedInterval }) => {
 
 	const bots = [
 		{ name: "ATTACK", icon: botAttackOne, serverName: "orange_bot" },
-    { name: "PLACE BOT HERE", icon: placeBot },
-    { name: "BALANCE", icon: botBalance, serverName: "blue_bot" },
-    { name: "DEFENCE", icon: botDefence, serverName: "green_bot" },
-    { name: "MEGABOT", icon: megabot, serverName: "yellow_bot" },
-    { name: "ATTACK", icon: botAttackTwo, serverName: "red_bot" }
+		{ name: "PLACE BOT HERE", icon: placeBot },
+		{ name: "BALANCE", icon: botBalance, serverName: "blue_bot" },
+		{ name: "DEFENCE", icon: botDefence, serverName: "green_bot" },
+		{ name: "MEGABOT", icon: megabot, serverName: "yellow_bot" },
+		{ name: "ATTACK", icon: botAttackTwo, serverName: "red_bot" }
 	];
 
 	return (

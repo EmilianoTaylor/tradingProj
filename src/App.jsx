@@ -10,24 +10,24 @@ import TimeIntervalBlock from './components/TimeInteralBlock/timeIntervalBlock'
 
 function App() {
 	const [selectedInterval, setSelectedInterval] = useState(() => {
-    return localStorage.getItem("selectedInterval") || "all_time";
-  });
+		return localStorage.getItem("selectedInterval") || "all_time";
+	});
+	
+	useEffect(() => {
+		localStorage.setItem("selectedInterval", selectedInterval);
+	}, [selectedInterval]);
 
-  useEffect(() => {
-    localStorage.setItem("selectedInterval", selectedInterval);
-  }, [selectedInterval]);
-
-  return (
-    <>
+	return (
+		<>
 			<Background />
 			<NavigationPanel />
 			<BalanceBlock />
 			<GraphBlock selectedInterval={selectedInterval} />
 			<ToolPanel />
-      <BotsBlock selectedInterval={selectedInterval} /> 
-      <TimeIntervalBlock onIntervalChange={setSelectedInterval} />
-    </>
-  )
+			<BotsBlock selectedInterval={selectedInterval} /> 
+			<TimeIntervalBlock onIntervalChange={setSelectedInterval} />
+		</>
+	)
 }
 
 export default App
